@@ -7,3 +7,5 @@ jobs:
   my_first_job:
     name: first job
     runs-on: ubuntu-22.04
+    steps:
+      - run : echo "first step"
