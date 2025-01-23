@@ -8,7 +8,6 @@ jobs:
     name: first job
     runs-on: ubuntu-22.04
     steps:
-      - name : test
       - run : echo "first step"
       - run : ls
 
