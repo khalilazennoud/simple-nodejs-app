@@ -35,6 +35,6 @@ jobs:
   my_forth_job:
     runs-on: ubuntu-22.04
     steps:
-      - run : node -v
+      - run : npm install
 
     
