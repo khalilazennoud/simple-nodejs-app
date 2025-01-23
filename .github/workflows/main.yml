@@ -11,6 +11,7 @@ jobs:
       - run : echo "first step"
       - run : ls
   test:
+     needs: [install-dependencies]
      runs-on: ubuntu-22.04
      strategy:
        matrix:
