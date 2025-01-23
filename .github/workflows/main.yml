@@ -32,7 +32,9 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-         
-
+  my_forth_job:
+    runs-on: ubuntu-22.04
+    steps:
+      - run : node -v
 
     
