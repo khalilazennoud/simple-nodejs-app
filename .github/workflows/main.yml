@@ -4,13 +4,13 @@ on:
     - master
 
 jobs:
-  my_first_job:
+  test-ubuntu-runner:
     name: first job
     runs-on: ubuntu-22.04
     steps:
       - run : echo "first step"
       - run : ls
-  my_second_job:
+  test:
      runs-on: ubuntu-22.04
      strategy:
        matrix:
@@ -22,7 +22,7 @@ jobs:
          run : ls
        - name: check matrix 
          run : echo $ {{matrix.test}}
-  my_third_job:
+  install-dependencies:
     runs-on: ubuntu-22.04
     strategy:
       matrix:
@@ -32,9 +32,8 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-  my_forth_job:
-    runs-on: ubuntu-22.04
-    steps:
-      - run : npm install
+      - name: install dependencies
+        run: npm i
+
 
     
