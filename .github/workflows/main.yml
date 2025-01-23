@@ -24,6 +24,14 @@ jobs:
          run : echo $ {{matrix.test}}
   my_third_job:
     runs-on: ubuntu-22.04
+    strategy:
+      matrix:
+        node-version: [18.8.x]
+    steps:
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
          
 
 
