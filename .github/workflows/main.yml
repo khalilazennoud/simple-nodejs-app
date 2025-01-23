@@ -10,6 +10,15 @@ jobs:
     steps:
       - run : echo "first step"
       - run : ls
+  my_second_job:
+     runs-on: ubuntu-22.04
+     strategy:
+       matrix:
+         test: [test]
+     steps:
+       - name: git checkout
+         uses : actions/checkout@v3
+         
 
 
     
