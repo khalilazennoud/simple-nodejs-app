@@ -1,0 +1,9 @@
+on:
+  push:
+    branches:
+    - master
+
+jobs:
+  my_first_job:
+    name: first job
+    runs-on: ubuntu-22.04
