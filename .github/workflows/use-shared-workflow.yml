@@ -1,0 +1,13 @@
+name: Use Shared Workflow
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  setup-environment:
+    uses: khalilazennoud/shared-github-actions/.github/workflows/setup-environment.yml@main
+    with:
+      node_version: '18'
+      install_dependencies: 'true'
